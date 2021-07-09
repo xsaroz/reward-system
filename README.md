@@ -1,11 +1,10 @@
 # Installation
 - Make sure to install a fresh Laravel Project to run this package
 - create folder packages/kunyo inside laravel project
-- clone this package
+- clone this package inside package/kunyo/
 - setup your env for connecting to your database
 
-- For local: 
-- Update on main laravel project composer.json
+- For local setup update on main laravel project composer.json
 ```
 "repositories": [
     {
@@ -16,6 +15,10 @@
         }
     }
 ]
+```
+
+- For requiring the package by laravel project
+```
 composer require kunyo/reward-system
 composer dump-autoload
 php artisan config:clear
@@ -51,11 +54,11 @@ OR
 You can import the sql file which is prefilled with customers, orders and orderProducts. You can directly list out orders and update their status. The sql file is inside docs folder
 
 ## Postman Guide
-Import postman collection from packages/kunyo/reward-system/src/docs/kunyo.postman_collection.json
-Create customer first
-Then create orders with the products information
+- Import postman collection from packages/kunyo/reward-system/src/docs/kunyo.postman_collection.json
+- Create customer first
+- Then create orders with the products information
 
-And then you can list or update orders from Postman requests
+- And then you can list or update orders from Postman requests
 
 
 ## Working Mechanism
