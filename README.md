@@ -1,11 +1,12 @@
 # Installation
-Make sure to install a fresh Laravel Project to run this package
-create folder packages/kunyo inside laravel project
-clone this package
-setup your env for connecting to your database
+- Make sure to install a fresh Laravel Project to run this package
+- create folder packages/kunyo inside laravel project
+- clone this package
+- setup your env for connecting to your database
 
-For local: 
-Update on main laravel project composer.json
+- For local: 
+- Update on main laravel project composer.json
+```
 "repositories": [
     {
         "type": "path",
@@ -15,7 +16,6 @@ Update on main laravel project composer.json
         }
     }
 ]
-```
 composer require kunyo/reward-system
 composer dump-autoload
 php artisan config:clear
