@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "8c0a4b8d-da00-4b42-8de6-7bbd3d1df471",
+		"name": "kunyo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Saroj Khatri\",\n        \"address\": \"Lubhoo\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/v1/customers",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"order_date\": \"2007-05-01 12:10:10\",\n        \"sales_type\": \"Normal\",\n        \"fk_customer_id\": 1,\n        \"products\": [\n            {\n                \"item_name\": \"Radio\",\n                \"normal_price\": 800.00,\n                \"promotion_price\": 712.99\n            }\n        ]\n    },\n    {\n        \"order_date\": \"2007-05-07 05:28:55\",\n        \"sales_type\": \"Normal\",\n        \"fk_customer_id\": 1,\n        \"products\": [\n            {\n                \"item_name\": \"Portable Audio\",\n                \"normal_price\": 16.00,\n                \"promotion_price\": 15.00\n            },\n            {\n                \"item_name\": \"The SIMS\",\n                \"normal_price\": 9.99,\n                \"promotion_price\": 8.79\n            }\n        ]\n    },\n    {\n        \"order_date\": \"2007-05-19 17:17:00\",\n        \"sales_type\": \"Promotion\",\n        \"fk_customer_id\": 1,\n        \"products\": [\n            {\n                \"item_name\": \"Radio\",\n                \"normal_price\": 800.00,\n                \"promotion_price\": 712.99\n            }\n        ]\n    },\n    {\n        \"order_date\": \"2007-05-22 22:47:16\",\n        \"sales_type\": \"Promotion\",\n        \"fk_customer_id\": 1,\n        \"products\": [\n            {\n                \"item_name\": \"Scanner\",\n                \"normal_price\": 124.00,\n                \"promotion_price\": 120.00\n            }\n        ]\n    },\n    {\n        \"order_date\": \"2007-05-27 08:15:07\",\n        \"sales_type\": \"Promotion\",\n        \"fk_customer_id\": 1,\n        \"products\": [\n            {\n                \"item_name\": \"Portable Audio\",\n                \"normal_price\": 16.00,\n                \"promotion_price\": 15.00\n            },\n            {\n                \"item_name\": \"Radio\",\n                \"normal_price\": 800.00,\n                \"promotion_price\": 712.99\n            }\n        ]\n    },\n    {\n        \"order_date\": \"2007-05-27 08:15:07\",\n        \"sales_type\": \"Promotion\",\n        \"fk_customer_id\": 1,\n        \"products\": [\n            {\n                \"item_name\": \"Camcoders\",\n                \"normal_price\": 359.00,\n                \"promotion_price\": 712.99\n            },\n            {\n                \"item_name\": \"Radio\",\n                \"normal_price\": 800.00,\n                \"promotion_price\": 712.99\n            }\n        ]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/v1/orders",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/v1/orders",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"order_id\": 1001,\n        \"status\": \"complete\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/v1/orders/update-status",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"update-status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "localhost:8000"
+		}
+	]
+}
