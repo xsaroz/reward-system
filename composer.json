@@ -1,0 +1,18 @@
+{
+    "name": "kunyo/reward-system",
+    "description": "Request for coding test for post of Sr. PHP developer",
+    "authors": [
+        {
+            "name": "saroj",
+            "email": "xsarozzz@gmail.com"
+        }
+    ],
+    "autoload": {
+    	"psr-4": {
+    		"Kunyo\\RewardSystem\\": "src/"
+    	},
+    	"classmap": [
+            "src/app/"
+        ]
+    }
+}
